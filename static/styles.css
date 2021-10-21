@@ -1,0 +1,50 @@
+/* universal reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    background-color: #121212;
+}
+
+/* styles for the page main divisions */
+
+#nav-bar {
+    color: #bdbdbd;
+    padding: 20px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #525d66;
+}
+
+#image-space {
+    color: #bdbdbd;
+    width: 50%;
+    height: 625px;
+    float: left;
+}
+
+#button-space {
+    color: #bdbdbd;
+    width: 50%;
+    height: 625px;
+    float: right;
+    background-color: #262d34;
+}
+
+#button-space button, select {
+    color: #bdbdbd;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 2px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #525d66;
+}
