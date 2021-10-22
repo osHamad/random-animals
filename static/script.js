@@ -38,12 +38,3 @@ function callback(changeTo, jsonKey){
     let image = document.getElementById('animal-image')
     image.src = JSON.parse(changeTo)[jsonKey]
 }
-
-
-document.getElementById('new-tab').addEventListener('click', ()=>{
-    let animalImage = document.getElementById('animal-image').src
-    console.log(animalImage)
-    if (animalImage =! '' || animalImage != '/icons/loading_gif.gif' || animalImage != '/icons/default.png'){
-        window.open(animalImage, '_blank').focus();
-    }
-})
