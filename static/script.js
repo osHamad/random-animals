@@ -12,6 +12,8 @@ document.getElementById('generate').addEventListener('click', ()=>{
     let species = document.getElementById('species-select')
     species = species.options[species.selectedIndex].value
 
+    document.getElementById('animal-image').src = '/icons/loading_gif.gif'
+
 
 
     getResponse(animalApi[species][0], callback, animalApi[species][1])
@@ -34,9 +36,14 @@ function getResponse(theUrl, callback, jsonKey)
 
 function callback(changeTo, jsonKey){
     let image = document.getElementById('animal-image')
-    console.log(changeTo)
     image.src = JSON.parse(changeTo)[jsonKey]
 }
 
 
-
+document.getElementById('new-tab').addEventListener('click', ()=>{
+    let animalImage = document.getElementById('animal-image').src
+    console.log(animalImage)
+    if (animalImage =! '' || animalImage != '/icons/loading_gif.gif' || animalImage != '/icons/default.png'){
+        window.open(animalImage, '_blank').focus();
+    }
+})
