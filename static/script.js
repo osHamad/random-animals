@@ -15,7 +15,7 @@ document.getElementById('generate').addEventListener('click', ()=>{
 
 
     
-    let res = getResponse('https://aws.random.cat/meow', callback)
+    getResponse(animalApi['dogs'], callback)
 
     
 })
@@ -28,15 +28,14 @@ function getResponse(theUrl, callback)
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(xmlHttp.responseText);
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.open("GET", theUrl, true)
     xmlHttp.send(null);
 }
 
 
 function callback(changeTo){
     let image = document.getElementById('animal-image')
-    console.log(changeTo)
-
+    image.src = JSON.parse(changeTo).url
 }
 
 
