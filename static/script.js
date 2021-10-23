@@ -3,9 +3,7 @@ document.getElementById('generate').addEventListener('click', ()=>{
     const animalApi = {
         'cats': ['https://aws.random.cat/meow', 'file'],
         'dogs': ['https://random.dog/woof.json', 'url'],
-        'foxes': ['https://randomfox.ca/floof/', 'image'],
-        'elephants': ['https://elephant-api.herokuapp.com/elephants/random', 'image'],
-        'ducks': ['https://random-d.uk/api/random', 'url']
+        'foxes': ['https://randomfox.ca/floof/', 'image']
     }
 
     // stores the select tag value of the selected species
